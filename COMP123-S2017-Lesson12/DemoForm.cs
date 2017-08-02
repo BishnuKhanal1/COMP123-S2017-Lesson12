@@ -11,7 +11,7 @@ using System.Windows.Forms;
  * Name: Bishnu Khanal
  * StusentID: 300924228
  * Date: August 1, 2017
- * Description: Demo applcation to shocase windows forms and UI Controls
+ * Description: Demo applcation to showcase windows forms and UI Controls
  * Version: 0.1- project was created
  */
 namespace COMP123_S2017_Lesson12
@@ -21,6 +21,23 @@ namespace COMP123_S2017_Lesson12
         public DemoForm()
         {
             InitializeComponent();
+        }
+        /// <summary>
+        /// This is the HelloButton event handler for the click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void HelloButton_Click(object sender, EventArgs e)
+        {
+            if (NameTextBox.Text.Length > 0)
+            {
+                HelloLabel.Text = "Hello, "+ NameTextBox.Text;
+            }
+            else
+            {
+                HelloLabel.Text = "Hello, World!";
+            }
+            
         }
     }
 }
